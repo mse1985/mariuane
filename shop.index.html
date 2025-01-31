@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Торговая площадка</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать на Торговую Площадку</h1>
+    </header>
+    <div class="container">
+        <!-- Пример продукта -->
+        <div class="product">
+            <img src="https://via.placeholder.com/300x200" alt="Продукт 1">
+            <h2>Продукт 1</h2>
+            <p>Цена: 1000 руб.</p>
+            <button onclick="addToCart('Продукт 1', 1000)">Добавить в корзину</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/300x200" alt="Продукт 2">
+            <h2>Продукт 2</h2>
+            <p>Цена: 2000 руб.</p>
+            <button onclick="addToCart('Продукт 2', 2000)">Добавить в корзину</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/300x200" alt="Продукт 3">
+            <h2>Продукт 3</h2>
+            <p>Цена: 1500 руб.</p>
+            <button onclick="addToCart('Продукт 3', 1500)">Добавить в корзину</button>
+        </div>
+    </div>
+
+    <div class="cart">
+        <h2>Корзина</h2>
+        <ul id="cartItems"></ul>
+        <p id="totalPrice">Общая стоимость: 0 руб.</p>
+    </div>
+
+    <div class="order-form" id="orderForm" style="display: none;">
+        <h2>Оформление заказа</h2>
+        <input type="text" id="customerName" placeholder="Ваше имя" required>
+        <input type="text" id="customerAddress" placeholder="Ваш адрес" required>
+        <button onclick="placeOrder()">Подтвердить заказ</button>
+    </div>
+
+    <div class="registration-form" id="registrationForm">
+        <h2>Регистрация</h2>
+        <input type="text" id="regName" placeholder="Ваше имя" required>
+        <input type="email" id="regEmail" placeholder="Электронная почта" required>
+        <input type="password" id="regPassword" placeholder="Пароль" required>
+        <button onclick="registerUser()">Зарегистрироваться</button>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
